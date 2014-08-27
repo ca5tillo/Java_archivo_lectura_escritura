@@ -117,27 +117,27 @@ public class Archivos {
 
         System.out.println("Comprobar si existe el archivo:\n");
         inf = archivos.Comprobar_archivo(path);
-        //System.out.println(inf);
+        System.out.println(inf);
 
         if (archivos.Expresion_regular(inf, "El archivo NO existe.*")) {
             // La carpeta donde se creara el archivo si tiene que existir 
             String a;
             a = archivos.Crear_archivo(path);
-            //System.out.println(a);
+            System.out.println(a);
             inf = archivos.Comprobar_archivo(path);
         }
         if (archivos.Expresion_regular(inf, "El archivo existe.*")) {
-            //System.out.println("Leer el archivo");
+            System.out.println("Leer el archivo");
 
             String lineas = archivos.Leer_Archivo(path);
-            //System.out.println(lineas);
+            System.out.println(lineas);
         }
 
         if (archivos.Expresion_regular(inf, "El archivo existe y puedo escribir.*")) {
-            //System.out.println("Escribir en el archivo");
+            System.out.println("Escribir en el archivo");
             archivos.Escribir_en_archivos_sin_borrar(path, "nueva linea");
             String lineas = archivos.Leer_Archivo(path);
-          //  System.out.println(lineas);
+            System.out.println(lineas);
         }
         
         archivos.Contenido_de_carpeta(path_carpeta);
